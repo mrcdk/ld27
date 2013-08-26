@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" width="20" height="20" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="health" value="5"/>
+ </properties>
+ <tileset firstgid="1" name="terrain" tilewidth="32" tileheight="32">
+  <image source="tileset.png" trans="2991b3" width="128" height="64"/>
+ </tileset>
+ <layer name="bg" width="20" height="20">
+  <properties>
+   <property name="tileset" value="terrain"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzVVNsKQCEMGtX/f3PnZSCyLocclCA0ClkOV8ysfizECvx7dwLU9bMKaj3vkT2J/sB15JV7qOxPqZflnwruqwrsH85tlYeozpjv7f7t9Mc54p0yyhneNeCuRvRmtt9GGc/YVa+gA0PoAU0=
+  </data>
+ </layer>
+ <objectgroup draworder="topdown" name="events" width="20" height="20">
+  <object type="player" x="576" y="416" width="32" height="32">
+   <properties>
+    <property name="health" value="4"/>
+   </properties>
+  </object>
+  <object type="clock" x="296" y="424" width="16" height="16">
+   <properties>
+    <property name="time" value="2"/>
+   </properties>
+  </object>
+  <object type="medpack" x="488" y="424" width="16" height="16"/>
+  <object type="medpack" x="456" y="424" width="16" height="16"/>
+  <object type="coin" x="232" y="456" width="16" height="16"/>
+  <object type="coin" x="72" y="392" width="16" height="16"/>
+  <object type="coin" x="72" y="424" width="16" height="16"/>
+  <object type="coin" x="200" y="296" width="16" height="16"/>
+  <object type="coin" x="72" y="200" width="16" height="16"/>
+  <object type="coin" x="296" y="296" width="16" height="16"/>
+  <object type="coin" x="360" y="168" width="16" height="16"/>
+  <object type="coin" x="424" y="168" width="16" height="16"/>
+  <object type="medpack" x="488" y="168" width="16" height="16"/>
+  <object type="coin" x="488" y="104" width="16" height="16"/>
+  <object type="coin" x="328" y="72" width="16" height="16"/>
+  <object type="coin" x="232" y="72" width="16" height="16"/>
+  <object type="medpack" x="392" y="104" width="16" height="16"/>
+  <object type="medpack" x="296" y="104" width="16" height="16"/>
+  <object type="medpack" x="192" y="104" width="16" height="16"/>
+  <object type="coin" x="136" y="72" width="16" height="16"/>
+  <object type="woman" x="96" y="96" width="32" height="32">
+   <properties>
+    <property name="destine" value="0"/>
+    <property name="fake" value=""/>
+    <property name="power" value="2"/>
+    <property name="velocity" value="0"/>
+   </properties>
+  </object>
+  <object type="ninja" x="32" y="96" width="32" height="32"/>
+  <object name="p2" type="platform" x="-32" y="96" width="128" height="32">
+   <properties>
+    <property name="direction" value="horizontal"/>
+    <property name="distance" value="-96"/>
+    <property name="mode" value="forward"/>
+    <property name="velocity" value="500"/>
+   </properties>
+  </object>
+  <object type="trigger" x="64" y="32" width="32" height="96">
+   <properties>
+    <property name="action" value="start"/>
+    <property name="to" value="p2"/>
+   </properties>
+  </object>
+  <object type="trigger" x="352" y="288" width="160" height="32">
+   <properties>
+    <property name="action" value="start"/>
+    <property name="to" value="p1"/>
+   </properties>
+  </object>
+  <object name="p1" type="platform" x="352" y="320" width="160" height="32">
+   <properties>
+    <property name="direction" value="vertical"/>
+    <property name="distance" value="-96"/>
+    <property name="mode" value="forward"/>
+    <property name="velocity" value="100"/>
+   </properties>
+  </object>
+  <object type="clock" x="360" y="264" width="16" height="16">
+   <properties>
+    <property name="time" value="2"/>
+   </properties>
+  </object>
+  <object type="clock" x="552" y="200" width="16" height="16">
+   <properties>
+    <property name="time" value="2"/>
+   </properties>
+  </object>
+  <object type="clock" x="344" y="104" width="16" height="16">
+   <properties>
+    <property name="time" value="2"/>
+   </properties>
+  </object>
+  <object name="p3" type="platform" x="192" y="512" width="96" height="32">
+   <properties>
+    <property name="direction" value="vertical"/>
+    <property name="distance" value="-32"/>
+    <property name="mode" value="forward"/>
+    <property name="velocity" value="500"/>
+   </properties>
+  </object>
+  <object type="trigger" x="192" y="448" width="96" height="32">
+   <properties>
+    <property name="action" value="start"/>
+    <property name="to" value="p3"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup draworder="topdown" name="collisions" width="20" height="20">
+  <object type="collision" x="288" y="448" width="320" height="96"/>
+  <object type="collision" x="608" y="0" width="32" height="544"/>
+  <object type="collision" x="32" y="480" width="160" height="64"/>
+  <object type="collision" x="192" y="512" width="96" height="32"/>
+  <object type="collision" x="0" y="0" width="32" height="544"/>
+  <object type="collision" x="96" y="320" width="512" height="32"/>
+  <object type="collision" x="32" y="0" width="480" height="32"/>
+  <object type="collision" x="32" y="128" width="480" height="32"/>
+  <object type="collision" x="512" y="0" width="96" height="64"/>
+ </objectgroup>
+</map>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" width="20" height="40" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="health" value="20"/>
+ </properties>
+ <tileset firstgid="1" name="terrain" tilewidth="32" tileheight="32">
+  <image source="tileset.png" trans="2991b3" width="128" height="64"/>
+ </tileset>
+ <layer name="bg" width="20" height="40">
+  <properties>
+   <property name="tileset" value="terrain"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYmBgYBrFwxpTC4yaNzjNIzcdjKaXkWketcoSFgaGB9R036h5o+U9peZREkZD0TxcgFLz0PXiMg+dPZTNw2U+IfNGMfkYAH+uB0s=
+  </data>
+ </layer>
+ <objectgroup draworder="topdown" name="events" width="20" height="40">
+  <object name="p1" type="platform" x="640" y="736" width="64" height="32">
+   <properties>
+    <property name="direction" value="horizontal"/>
+    <property name="distance" value="-32"/>
+    <property name="mode" value="forward"/>
+    <property name="velocity" value="150"/>
+   </properties>
+  </object>
+  <object name="p2" type="platform" x="640" y="704" width="64" height="32">
+   <properties>
+    <property name="direction" value="horizontal"/>
+    <property name="distance" value="-32"/>
+    <property name="mode" value="forward"/>
+    <property name="velocity" value="140"/>
+   </properties>
+  </object>
+  <object name="p3" type="platform" x="640" y="672" width="64" height="32">
+   <properties>
+    <property name="direction" value="horizontal"/>
+    <property name="distance" value="-32"/>
+    <property name="mode" value="forward"/>
+    <property name="velocity" value="130"/>
+   </properties>
+  </object>
+  <object name="p4" type="platform" x="640" y="640" width="64" height="32">
+   <properties>
+    <property name="direction" value="horizontal"/>
+    <property name="distance" value="-32"/>
+    <property name="mode" value="forward"/>
+    <property name="velocity" value="120"/>
+   </properties>
+  </object>
+  <object name="p5" type="platform" x="640" y="608" width="64" height="32">
+   <properties>
+    <property name="direction" value="horizontal"/>
+    <property name="distance" value="-32"/>
+    <property name="mode" value="forward"/>
+    <property name="velocity" value="110"/>
+   </properties>
+  </object>
+  <object type="trigger" x="448" y="640" width="32" height="128">
+   <properties>
+    <property name="action" value="start"/>
+    <property name="to" value="p1,p2,p3,p4,p5"/>
+   </properties>
+  </object>
+  <object name="p20" type="platform" x="32" y="896" width="96" height="32">
+   <properties>
+    <property name="direction" value="vertical"/>
+    <property name="distance" value="160"/>
+    <property name="mode" value="forward"/>
+    <property name="velocity" value="160"/>
+   </properties>
+  </object>
+  <object type="player" x="576" y="1120" width="32" height="32">
+   <properties>
+    <property name="health" value="4"/>
+   </properties>
+  </object>
+  <object type="ninja" x="96" y="352" width="32" height="32"/>
+  <object type="woman" x="544" y="352" width="32" height="32">
+   <properties>
+    <property name="destine" value="0"/>
+    <property name="fake" value=""/>
+    <property name="power" value="1"/>
+    <property name="velocity" value="0"/>
+   </properties>
+  </object>
+  <object type="coin" x="392" y="872" width="16" height="16"/>
+  <object type="coin" x="456" y="1032" width="16" height="16"/>
+  <object type="coin" x="488" y="1064" width="16" height="16"/>
+  <object type="coin" x="488" y="1032" width="16" height="16"/>
+  <object type="coin" x="456" y="1064" width="16" height="16"/>
+  <object type="coin" x="328" y="872" width="16" height="16"/>
+  <object type="coin" x="104" y="1000" width="16" height="16"/>
+  <object type="coin" x="168" y="1128" width="16" height="16"/>
+  <object type="coin" x="40" y="1032" width="16" height="16"/>
+  <object type="coin" x="552" y="872" width="16" height="16"/>
+  <object type="coin" x="72" y="712" width="16" height="16"/>
+  <object type="coin" x="168" y="680" width="16" height="16"/>
+  <object type="coin" x="200" y="744" width="16" height="16"/>
+  <object type="coin" x="616" y="744" width="16" height="16">
+   <properties>
+    <property name="nocount" value=""/>
+   </properties>
+  </object>
+  <object type="coin" x="616" y="712" width="16" height="16">
+   <properties>
+    <property name="nocount" value=""/>
+   </properties>
+  </object>
+  <object type="coin" x="616" y="680" width="16" height="16">
+   <properties>
+    <property name="nocount" value=""/>
+   </properties>
+  </object>
+  <object type="coin" x="616" y="648" width="16" height="16">
+   <properties>
+    <property name="nocount" value=""/>
+   </properties>
+  </object>
+  <object type="coin" x="616" y="616" width="16" height="16">
+   <properties>
+    <property name="nocount" value=""/>
+   </properties>
+  </object>
+  <object type="coin" x="488" y="712" width="16" height="16"/>
+  <object type="coin" x="520" y="584" width="16" height="16"/>
+  <object type="coin" x="456" y="584" width="16" height="16"/>
+  <object type="coin" x="360" y="584" width="16" height="16"/>
+  <object type="coin" x="264" y="584" width="16" height="16"/>
+  <object type="coin" x="136" y="584" width="16" height="16"/>
+  <object type="coin" x="72" y="520" width="16" height="16"/>
+  <object type="coin" x="104" y="552" width="16" height="16"/>
+  <object type="coin" x="296" y="456" width="16" height="16"/>
+  <object type="coin" x="360" y="456" width="16" height="16"/>
+  <object type="coin" x="424" y="392" width="16" height="16"/>
+  <object name="p10" type="platform" x="32" y="608" width="128" height="32">
+   <properties>
+    <property name="direction" value="vertical"/>
+    <property name="distance" value="-64"/>
+    <property name="mode" value="forward"/>
+    <property name="velocity" value="200"/>
+   </properties>
+  </object>
+  <object name="p12" type="platform" x="416" y="608" width="64" height="32">
+   <properties>
+    <property name="direction" value="vertical"/>
+    <property name="distance" value="-160"/>
+    <property name="mode" value="forward"/>
+    <property name="velocity" value="180"/>
+   </properties>
+  </object>
+  <object name="p11" type="platform" x="224" y="608" width="128" height="32">
+   <properties>
+    <property name="direction" value="vertical"/>
+    <property name="distance" value="-128"/>
+    <property name="mode" value="forward"/>
+    <property name="velocity" value="190"/>
+   </properties>
+  </object>
+  <object type="trigger" x="64" y="416" width="32" height="128">
+   <properties>
+    <property name="action" value="start"/>
+    <property name="to" value="p10,p11,p12"/>
+   </properties>
+  </object>
+  <object type="trigger" x="160" y="800" width="32" height="96">
+   <properties>
+    <property name="action" value="start"/>
+    <property name="to" value="p20"/>
+   </properties>
+  </object>
+  <object type="trigger" x="256" y="1120" width="32" height="32">
+   <properties>
+    <property name="action" value="start"/>
+    <property name="to" value="p21"/>
+   </properties>
+  </object>
+  <object type="ninja" x="224" y="1120" width="32" height="32"/>
+  <object type="woman" x="32" y="576" width="32" height="32">
+   <properties>
+    <property name="destine" value="0"/>
+    <property name="power" value="1"/>
+    <property name="velocity" value="0"/>
+   </properties>
+  </object>
+  <object type="clock" x="520" y="1000" width="16" height="16">
+   <properties>
+    <property name="time" value="4"/>
+   </properties>
+  </object>
+  <object type="clock" x="200" y="872" width="16" height="16">
+   <properties>
+    <property name="time" value="2"/>
+   </properties>
+  </object>
+  <object type="clock" x="392" y="712" width="16" height="16">
+   <properties>
+    <property name="time" value="2"/>
+   </properties>
+  </object>
+  <object type="clock" x="456" y="424" width="16" height="16">
+   <properties>
+    <property name="time" value="1"/>
+   </properties>
+  </object>
+  <object type="clock" x="296" y="296" width="16" height="16">
+   <properties>
+    <property name="time" value="2"/>
+   </properties>
+  </object>
+  <object type="medpack" x="456" y="1128" width="16" height="16"/>
+  <object type="medpack" x="488" y="1128" width="16" height="16"/>
+  <object type="medpack" x="264" y="872" width="16" height="16"/>
+  <object type="medpack" x="296" y="680" width="16" height="16"/>
+  <object type="medpack" x="424" y="680" width="16" height="16"/>
+  <object type="medpack" x="488" y="456" width="16" height="16"/>
+  <object type="medpack" x="488" y="424" width="16" height="16"/>
+  <object type="medpack" x="104" y="296" width="16" height="16"/>
+  <object type="medpack" x="72" y="296" width="16" height="16"/>
+  <object type="medpack" x="72" y="328" width="16" height="16"/>
+  <object type="medpack" x="72" y="360" width="16" height="16"/>
+  <object type="medpack" x="104" y="328" width="16" height="16"/>
+  <object type="medpack" x="136" y="296" width="16" height="16"/>
+  <object type="medpack" x="136" y="328" width="16" height="16"/>
+  <object type="medpack" x="136" y="360" width="16" height="16"/>
+  <object type="medpack" x="296" y="872" width="16" height="16"/>
+  <object type="medpack" x="200" y="1000" width="16" height="16"/>
+  <object name="p21" type="platform" x="192" y="960" width="128" height="32">
+   <properties>
+    <property name="direction" value="vertical"/>
+    <property name="distance" value="32"/>
+    <property name="mode" value="forward"/>
+    <property name="velocity" value="200"/>
+   </properties>
+  </object>
+  <object type="medpack" x="232" y="1000" width="16" height="16"/>
+  <object type="medpack" x="264" y="1000" width="16" height="16"/>
+  <object type="medpack" x="296" y="1000" width="16" height="16"/>
+  <object type="medpack" x="296" y="1032" width="16" height="16"/>
+  <object type="medpack" x="296" y="1064" width="16" height="16"/>
+  <object type="medpack" x="296" y="1096" width="16" height="16"/>
+  <object type="medpack" x="296" y="1128" width="16" height="16"/>
+  <object type="medpack" x="264" y="1128" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup draworder="topdown" name="collisions" width="20" height="40" visible="0">
+  <object type="collision" x="-256" y="968" width="224" height="32"/>
+  <object type="collision" x="32" y="1152" width="576" height="64"/>
+  <object type="collision" x="192" y="1024" width="96" height="96"/>
+  <object type="collision" x="32" y="384" width="320" height="32"/>
+  <object type="collision" x="128" y="768" width="480" height="32"/>
+  <object type="collision" x="32" y="608" width="480" height="32"/>
+  <object type="collision" x="480" y="384" width="128" height="32"/>
+  <object type="collision" x="32" y="128" width="576" height="64"/>
+  <object type="collision" x="608" y="128" width="32" height="1088"/>
+  <object type="collision" x="320" y="992" width="128" height="160"/>
+  <object type="collision" x="0" y="128" width="32" height="1088"/>
+  <object type="collision" x="512" y="1024" width="32" height="128"/>
+  <object type="collision" x="128" y="896" width="320" height="96"/>
+  <object type="collision" x="192" y="1120" width="32" height="32"/>
+ </objectgroup>
+</map>

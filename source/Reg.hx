@@ -9,6 +9,13 @@ import flixel.util.FlxSave;
 */
 class Reg
 {
+	public static inline var PLAYER_ID:Int = 0;
+	public static inline var PLATFORM_ID:Int = 1;
+	public static inline var COIN_ID:Int = 2;
+	public static inline var MEDPACK_ID:Int = 3;
+	public static inline var NINJA_ID:Int = 4;
+	public static inline var WOMAN_ID:Int = 5;
+	
 	/**
 	 * Generic levels Array that can be used for cross-state stuff.
 	 * Example usage: Storing the levels of a platformer.

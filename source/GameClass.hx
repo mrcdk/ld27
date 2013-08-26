@@ -1,6 +1,7 @@
 package;
 
 import flash.Lib;
+import flixel.FlxG;
 import flixel.FlxGame;
 	
 class GameClass extends FlxGame
